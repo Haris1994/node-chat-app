@@ -9,11 +9,5 @@ let socket = io();
      })
 
      socket.on('newMessage', function(message) {
-         console.log('Got new message', message.text);
-         console.log(message.from);
-         console.log(message.createdAt);
+         console.log('Got new message', message);
      })
-     socket.emit('createMessage', {
-        from: 'jen@example.com',
-        text: 'Kya ho raha hai'
-    })
